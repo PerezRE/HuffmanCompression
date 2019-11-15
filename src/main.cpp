@@ -8,9 +8,9 @@
 #include <vector>
 #include <ctype.h>
 #include <stack>
-#include "src/Tokenizer.hpp"
-#include "src/Node.hpp"
-#include "src/HuffmanTree.hpp"
+#include "Tokenizer.hpp"
+#include "Node.hpp"
+#include "HuffmanTree.hpp"
 
 using namespace std;
 
