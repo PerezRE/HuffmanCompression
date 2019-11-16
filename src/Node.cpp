@@ -62,6 +62,10 @@ void Node::set_right(Node& r) {
 	right = &r;
 }
 
+bool Node::is_leaf() const {
+	return !left && !right;
+}
+
 bool Node::operator<(const Node& n) const {
 	return freq < n.freq;
 }

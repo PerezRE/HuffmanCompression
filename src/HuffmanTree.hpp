@@ -23,7 +23,6 @@ private:
 		 * @param function funciton to be called.
 		*/
 	void postorder(Node *, void (*)(Node *));
-
 public:
 	/** Create a new Huffman Tree
 	 * @param queue A priority queue with the sorted nodes by frequency.
@@ -31,11 +30,15 @@ public:
 	HuffmanTree(std::priority_queue<Node *, std::vector<Node *>, NodeComparator> &);
 	/** Detroys the Huffman Tree */
 	~HuffmanTree();
-	/** Iterates the tree in a preorder way and 
-	 * create the compressed binary representation for each leaf (character) 
+	/** Create the compressed binary representation for each leaf (character).
 	 * @param map Dictionary that holds the character as key and its compressed binary representation as std::string
 	*/
-	void preorder(std::map<char, std::string> &) const;
+	void encode(std::map<char, std::string> &) const;
+	/** Decodes a message given a binary string representation.
+	 * @param coded_message Message to decode.
+	 * @return Message decoded.
+	*/
+	std::string decode(const std::string&) const;
 };
 
 #endif

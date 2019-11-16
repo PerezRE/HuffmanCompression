@@ -74,9 +74,12 @@ int main(int argc, char* argv[])
 
     // Finally, the compressed binary representation of each character is printed.
     std::map<char, std::string> coded_chars;
-    h_tree.preorder(coded_chars);
+    h_tree.encode(coded_chars);
     for (auto pair : coded_chars)
         cout << pair.first << " : " << pair.second << endl;
+
+    // Dump compressed message.
+    cout << endl << h_tree.decode("011011110110") << endl;
     
     return 0;
 }

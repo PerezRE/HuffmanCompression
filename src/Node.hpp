@@ -60,6 +60,10 @@ public:
 	 * @param node new right node.
 	 */
 	void set_right(Node &);
+	/** Checks if the node is leaf
+	 * @return true if it does not have left and right nodes.
+	 */
+	bool is_leaf() const;
 	/** Determines if the node is less than other one, using frequency as reference point.
 	 * @param node node to be compared.
 	*/
